@@ -1,0 +1,14 @@
+import random
+rows = int(input('Rows: ')
+columns = int(input('Columns: '))
+A = [[random.randint(1,51) for j in range(rows)] for i in range(columns)]
+print (A)
+B = len(A)
+C = len(A[0])
+for c in range(columns):
+    val = [r[c] for r in A]
+    if c % 2 != 0:
+        val.sort(reverse=True)
+        for r in range(rows):
+            A[r][c] = val.pop()
+print(A)
