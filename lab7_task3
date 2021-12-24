@@ -1,0 +1,16 @@
+import random
+m = int(input('m = '))
+n = int(input('n = '))
+A = [[random.randint(1, 101) for j in range(n)] for i in range(m)]
+B = [[random.randint(1, 100) for j in range(n)] for i in range(m)]
+C = [[A[i][j]*B[i][j] for j in range(n) ] for i in range(m)]
+print('-------------------------')
+print("A:")
+for i in range(m):
+    print(A[i])
+print('B:')
+for i in range(m):
+    print(B[i])
+print('C:')
+for i in range(m):
+    print(C[i])
